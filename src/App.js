@@ -5,6 +5,8 @@ import './App.css';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
+import {Popover, OverlayTrigger, Button} from 'react-bootstrap';
+
 moment.locale("en");
 
 const localizer = BigCalendar.momentLocalizer(moment) ;
@@ -24,6 +26,13 @@ const myEvents = [
 },
 ];
 
+const popoverHoverFocus = (
+          <Popover id="popover-trigger-hover-focus" title="Popover bottom">
+            <strong>Holy guacamole!</strong>
+          </Popover>
+        );
+
+
 
 class App extends Component {
     constructor(props) {
@@ -34,7 +43,7 @@ class App extends Component {
     }
 
     eventStyleGetter(event, start, end, isSelected) {
-        console.log(event);
+        // console.log(event);
         var backgroundColor = event.hexColor;
         var style = {
             backgroundColor: backgroundColor,
@@ -68,13 +77,13 @@ class App extends Component {
     }
 
     createEventsFromJson(json_response){
-        console.log(json_response);
+        // console.log(json_response);
 
         var newEvent;
         var events = [];
 
         for(var i=0; i<json_response.results.length; i++){
-            console.log(json_response.results[i]);
+            // console.log(json_response.results[i]);
 
             newEvent = {
               allDay: true,
@@ -97,6 +106,7 @@ class App extends Component {
 
 
     render() {
+
     return (
         <div style={{ height: 600, width: 900 }}>
             <BigCalendar
@@ -105,6 +115,9 @@ class App extends Component {
                 startAccessor="startDate"
                 endAccessor="endDate"
                 eventPropGetter={(this.eventStyleGetter)}
+                selectable={true}
+                onSelectEvent={event => console.log(event)}
+                onSelectSlot={(slot) => console.log(slot)}
             />
         </div>
     );

@@ -41,3 +41,11 @@
   position: absolute;
   padding: 15px;
 }
+
+.rbc-day-bg{
+  cursor: pointer;
+}
+
+.rbc-day-bg:hover{
+  background: #e5e5e5;
+}
