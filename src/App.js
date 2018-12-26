@@ -39,6 +39,8 @@ class App extends Component {
         super(props);
         this.state = {
             events: myEvents,
+            activePopup: false,
+            selectedSlots: {slots: []},
         }
     }
 
@@ -100,6 +102,27 @@ class App extends Component {
         this.setState({events: events});
     }
 
+    showSlotPopUp(){
+        // http://as-rocknroll.local.sporteasy.net:8000/event/new/all/?date=2018-12-20
+        // window.location.reload();
+
+        console.log(this.state.activePopup);
+        console.log(this.state.selectedSlots);
+        console.log(this.state.selectedSlots.slots.length);
+
+        if(this.state.selectedSlots.slots.length > 0) {
+            const slot = String(this.state.selectedSlots.slots[0]).split(" ");
+            const day = slot[2];
+            const month = slot[1];
+            const year = slot[3];
+            return (
+                <div>
+                    Click : {day} {month} {year}
+                </div>
+            )
+        }
+    }
+
     componentDidMount(){
         this.getApiEventsList();
     }
@@ -117,8 +140,9 @@ class App extends Component {
                 eventPropGetter={(this.eventStyleGetter)}
                 selectable={true}
                 onSelectEvent={event => console.log(event)}
-                onSelectSlot={(slot) => console.log(slot)}
+                onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
             />
+            {this.showSlotPopUp()}
         </div>
     );
     }
