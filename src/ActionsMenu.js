@@ -1,60 +1,64 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Calendar.css';
 
 class ActionsMenu extends Component {
 
-  render() {
+    filterTeams(Calendar){
 
-    return(
+      const options = Calendar.state.teamsList;
 
-      <div id={"actions_menu"}>
+      // If option checkbox is checked, add this option
+      let checked_checkbox = [];
 
-          {/*Add an event*/}
-          <a className={"action_link"} href={"/members/invite/"}>
-            <button className={"action_button add_a_member_button"}>
-                Ajouter un évenement
-            </button>
-          </a>
+      for (var i = 0; i < options.length; i++) {
+          let checkbox = document.getElementById("team_selection_" + options[i]);
+          if (checkbox.checked) {
+              checked_checkbox.push(options[i]);
+          }
+      }
+      Calendar.setState({selectedTeams: checked_checkbox});
+    }
 
-          {/*Export members list*/}
-          <a href={"/members/export/"}>
-            <button className={"action_button"}>
-                Export
-            </button>
-          </a>
+    render() {
 
-          {/*General Filter*/}
-          <input className={"action_filter"} type={"text"} placeholder={"Rechercher.."}/>
+        const Calendar = this.props.Calendar;
 
-          {/*/!*Seasons Filter*!/*/}
-          {/*<select onChange={e => this.getApiClubSeasonMemberList(e.target.value, ClubMembersList)}*/}
-                {/*className={"select_season"}>*/}
-                {/*<option value='all'>{ClubMembersList.props.translations.all}</option>*/}
-                {/*{ClubMembersList.state.seasons_list.map(season => (*/}
-                    {/*<option value={season.id}>{season.slug_name}</option>*/}
-                {/*))}*/}
-          {/*</select>*/}
+        return(
 
-          {/*/!*Teams Checkbox Filter*!/*/}
-          {/*<div onClick={() => this.showTeamsFilter()} className={"button_general_teams_filter"}>*/}
-            {/*<div id={"general_teams_filter"}>*/}
-                {/*{options.map(option => (*/}
-                        {/*<label>*/}
-                            {/*<div className={"checkbox_filter_choice"}>*/}
-                                {/*<input type={"checkbox"} id={"team_selection_"+ option} onChange={event => this.getSelectedTeams(ClubMembersList)}/>*/}
-                                {/*{option}*/}
-                            {/*</div>*/}
-                        {/*</label>*/}
-                {/*))}*/}
-            {/*</div>*/}
-          {/*</div>*/}
+          <div id={"actions_menu"}>
 
+              {/*Add an event*/}
+              <a className={"action_link"} href={"/members/invite/"}>
+                <button className={"action_button add_a_member_button"}>
+                    Ajouter un évenement
+                </button>
+              </a>
 
-      </div>
+              {/*Export members list*/}
+              <a href={"/members/export/"}>
+                <button className={"action_button"}>
+                    Export
+                </button>
+              </a>
 
+              {/*General Filter*/}
+              <input className={"action_filter"} type={"text"} placeholder={"Rechercher.."}/>
 
+              {/*Teams Checkbox Filter*/}
+              <div id={"general_teams_filter"}>
+                    {Calendar.state.teamsList.map(option => (
+                            <label>
+                                <div>
+                                    <input type={"checkbox"} id={"team_selection_"+ option}
+                                           onChange={event => this.filterTeams(Calendar)}/>
+                                    {option}
+                                </div>
+                            </label>
+                    ))}
+                </div>
+          </div>
 
-    );
+        );
 
   }
 

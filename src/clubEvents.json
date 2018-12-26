@@ -3,6 +3,7 @@
 	"teams": [
 		{
 			"id": 6,
+			"name": "PSG",
 			"events": [
 				{
 					"id": 5,
@@ -16,17 +17,18 @@
 				}]
 		},
 		{
-			"id" : 9,
-			"events" : [
+			"id": 9,
+			"name": "OM",
+			"events": [
 				{
-					"id" : 12,
+					"id": 12,
 					"name": "Entrainement",
-					"start_at" : "12-03-2018"
+					"start_at": "12-03-2018"
 				},
 				{
-					"id" : 32,
+					"id": 32,
 					"name": "Compétition",
-					"start_at" : "12-12-2018"
+					"start_at": "12-12-2018"
 				}]
 		}
 	]
