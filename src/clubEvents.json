@@ -1,0 +1,33 @@
+{
+	"club_id": 8,
+	"teams": [
+		{
+			"id": 6,
+			"events": [
+				{
+					"id": 5,
+					"name": "Entrainement",
+					"start_at": "2018-12-27T14:00:00+02:00"
+				},
+				{
+					"id" : 7,
+					"name": "Match Amical",
+					"start_at" : "12-04-2018"
+				}]
+		},
+		{
+			"id" : 9,
+			"events" : [
+				{
+					"id" : 12,
+					"name": "Entrainement",
+					"start_at" : "12-03-2018"
+				},
+				{
+					"id" : 32,
+					"name": "Compétition",
+					"start_at" : "12-12-2018"
+				}]
+		}
+	]
+}

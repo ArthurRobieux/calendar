@@ -5,6 +5,7 @@ import './App.css';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import ActionsMenu from './ActionsMenu';
+import clubEvents from "./clubEvents.json"
 
 import {Popover, OverlayTrigger, Button} from 'react-bootstrap';
 
@@ -80,7 +81,7 @@ class App extends Component {
     }
 
     createEventsFromJson(json_response){
-        // console.log(json_response);
+        console.log(json_response);
 
         var newEvent;
         var events = [];
@@ -96,20 +97,45 @@ class App extends Component {
                          <div className={"event"}>Event {json_response.results[i].id}</div>
                          <div className={"info_popup"}>{json_response.results[i].category.localized_name}</div>
                      </div>,
-              hexColor: 'lightsalmon'
+              hexColor: 'lightsalmon',
             };
             events.push(newEvent);
         }
         this.setState({events: events});
     }
 
-    showSlotPopUp(){
+    createClubEventsFromJson() {
+        console.log(clubEvents);
+
+        var newEvent;
+        var events = [];
+
+        const colors = ["red", "blue", "green", "purple", "yellow", "lightsalmon"];
+
+        for (var i = 0; i < clubEvents.teams.length; i++) {
+            for (var j = 0; j < clubEvents.teams[i].events.length; j++) {
+
+                newEvent = {
+                    allDay: true,
+                    endDate: new Date(clubEvents.teams[i].events[j].start_at),
+                    startDate: new Date(clubEvents.teams[i].events[j].start_at),
+                    title: <div>
+                                <div className={"event"}>Event {clubEvents.teams[i].events[j].id}</div>
+                                <div className={"info_popup"}>{clubEvents.teams[i].events[j].name}
+                                ({clubEvents.teams[i].id})</div>
+                            </div>,
+                    hexColor: colors[i],
+                    teamId: clubEvents.teams[i].id
+                };
+                events.push(newEvent);
+            }
+            this.setState({events: events});
+        }
+    }
+
+    showSlot(){
         // http://as-rocknroll.local.sporteasy.net:8000/event/new/all/?date=2018-12-20
         // window.location.reload();
-
-        console.log(this.state.activePopup);
-        console.log(this.state.selectedSlots);
-        console.log(this.state.selectedSlots.slots.length);
 
         if(this.state.selectedSlots.slots.length > 0) {
             const slot = String(this.state.selectedSlots.slots[0]).split(" ");
@@ -125,33 +151,36 @@ class App extends Component {
     }
 
     componentDidMount(){
-        this.getApiEventsList();
+        // this.getApiEventsList();
+        this.createClubEventsFromJson();
     }
 
 
     render() {
 
-    return (
-        <div>
+        // console.log(this.state.events);
 
-            <ActionsMenu/>
+        return (
+            <div id={"calendarApp"}>
 
-            <div id={"calendar"}>
-                <BigCalendar
-                    localizer={localizer}
-                    events={this.state.events}
-                    startAccessor="startDate"
-                    endAccessor="endDate"
-                    eventPropGetter={(this.eventStyleGetter)}
-                    selectable={true}
-                    onSelectEvent={event => console.log(event)}
-                    onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
-                />
-                {this.showSlotPopUp()}
+                <ActionsMenu/>
+
+                <div id={"calendar"}>
+                    <BigCalendar
+                        localizer={localizer}
+                        events={this.state.events}
+                        startAccessor="startDate"
+                        endAccessor="endDate"
+                        eventPropGetter={(this.eventStyleGetter)}
+                        selectable={true}
+                        onSelectEvent={event => console.log(event)}
+                        onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
+                    />
+                    {this.showSlot()}
+                </div>
+
             </div>
-
-        </div>
-    );
+        );
     }
 }
 
