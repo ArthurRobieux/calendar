@@ -20,7 +20,9 @@ class CalendarApp extends Component {
             activePopup: false,
             selectedSlots: {slots: []},
             teamsList: [],
+            eventTypesList: [],
             selectedTeams: [],
+            selectedEventTypes: [],
             calendarView: "grid",
         }
     }
@@ -107,7 +109,8 @@ class CalendarApp extends Component {
                                 ({clubEvents.teams[i].id})</div>
                             </div>,
                     hexColor: colors[i],
-                    teamId: clubEvents.teams[i].id
+                    teamId: clubEvents.teams[i].id,
+                    type: clubEvents.teams[i].events[j].name
                 };
                 events.push(newEvent);
             }
@@ -129,14 +132,52 @@ class CalendarApp extends Component {
         this.setState({teamsList: teamsList});
     }
 
+    // Get teams list in state.teamsList
+    getEventTypesList(){
+        var eventTypesList = [];
+
+        var newType = {};
+
+        for (var i = 0; i < clubEvents.teams.length; i++) {
+            console.log(clubEvents.teams[i]);
+            for(var j=0; j<clubEvents.teams[i].events.length; j++) {
+                newType = clubEvents.teams[i].events[j].name;
+                if (!eventTypesList.includes(newType)){
+                    eventTypesList.push(newType);
+                }
+            }
+        }
+        this.setState({eventTypesList: eventTypesList});
+        console.log(eventTypesList)
+    }
+
     // Filter events if there is a filter
     filteredEvents(){
-        if(this.state.selectedTeams.length > 0){
-            var filteredEvents = [];
+
+        var filteredEvents = [];
+
+        // If 2 filters (teams + types)
+        if(this.state.selectedTeams.length > 0 && this.state.selectedEventTypes.length > 0){
             for(var i=0; i<this.state.events.length; i++){
-                // console.log(this.state.events[i].teamId);
-                if(this.state.selectedTeams.includes(this.state.events[i].teamId)){
+                if(this.state.selectedTeams.includes(this.state.events[i].teamId) && this.state.selectedEventTypes.includes(this.state.events[i].type)){
                     filteredEvents.push(this.state.events[i]);
+                }
+            }
+            return(filteredEvents);
+        }
+        // If only team filter
+        else if(this.state.selectedTeams.length > 0){
+            for(var j=0; j<this.state.events.length; j++){
+                if(this.state.selectedTeams.includes(this.state.events[j].teamId)){
+                    filteredEvents.push(this.state.events[j]);
+                }
+            }
+            return(filteredEvents);
+        }
+        else if(this.state.selectedEventTypes.length > 0){
+            for(var k=0; k<this.state.events.length; k++){
+                if(this.state.selectedEventTypes.includes(this.state.events[k].type)){
+                    filteredEvents.push(this.state.events[k]);
                 }
             }
             return(filteredEvents);
@@ -192,6 +233,7 @@ class CalendarApp extends Component {
     componentDidMount(){
         // this.getApiEventsList();
         this.getTeamsList();
+        this.getEventTypesList();
         this.createClubEventsFromJson();
     }
 
