@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Calendar from './Calendar';
+import CalendarApp from './CalendarApp';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Calendar />, document.getElementById('root'));
+ReactDOM.render(<CalendarApp />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

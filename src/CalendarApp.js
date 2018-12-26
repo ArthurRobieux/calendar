@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import events from "./events";
 import BigCalendar from "react-big-calendar";
-import './Calendar.css';
+import './CalendarApp.css';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import ActionsMenu from './ActionsMenu';
@@ -11,7 +11,7 @@ moment.locale("en");
 
 const localizer = BigCalendar.momentLocalizer(moment) ;
 
-class Calendar extends Component {
+class CalendarApp extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -192,4 +192,4 @@ class Calendar extends Component {
     }
 }
 
-export default Calendar;
+export default CalendarApp;
