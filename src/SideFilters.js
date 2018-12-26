@@ -48,13 +48,13 @@ class SideFilters extends Component {
                   Types
                   <hr/>
                     {Calendar.state.eventTypesList.map(eventType => (
+                        <div>
                             <label>
-                                <div>
-                                    <input type={"checkbox"} id={"team_selection_"+ eventType}
+                                    <input className={"checkbox_filter"} type={"checkbox"} id={"team_selection_"+ eventType}
                                            onChange={event => this.filterEventTypes(Calendar)}/>
                                     {eventType}
-                                </div>
                             </label>
+                        </div>
                     ))}
               </div>
 
@@ -64,13 +64,14 @@ class SideFilters extends Component {
                   Equipes
                   <hr/>
                     {Calendar.state.teamsList.map(team => (
-                        <label>
-                            <div style={{color:team.color}}>
-                                <input type={"checkbox"} id={"team_selection_"+ team.id}
-                                       onChange={event => this.filterTeams(Calendar)}/>
-                                {team.name}
-                            </div>
-                        </label>
+                        <div>
+                            <label>
+                                    <input className={"checkbox_filter"} type={"checkbox"} id={"team_selection_"+ team.id}
+                                           onChange={event => this.filterTeams(Calendar)}
+                                           style={{background:team.color}}/>
+                                    {team.name}
+                            </label>
+                        </div>
                     ))}
               </div>
 
