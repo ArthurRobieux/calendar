@@ -28,7 +28,6 @@ class CalendarApp extends Component {
     }
 
     eventStyleGetter(event, start, end, isSelected) {
-        // console.log(event);
         var backgroundColor = event.hexColor;
         var style = {
             backgroundColor: backgroundColor,
@@ -63,8 +62,7 @@ class CalendarApp extends Component {
     }
 
     createEventsFromJson(json_response){
-        console.log(json_response);
-
+        // console.log(json_response);
         var newEvent;
         var events = [];
 
@@ -88,67 +86,54 @@ class CalendarApp extends Component {
 
     // Club Events functions
 
+    // Create events data and get teams / eventTypes Lists
     createClubEventsFromJson() {
-        console.log(clubEvents);
+        // console.log(clubEvents);
 
         var newEvent;
         var events = [];
 
+        var newTeam = {};
+        var teamsList = [];
+
+        var newType = {};
+        var eventTypesList = [];
+
         const colors = ["lightskyblue", "lightseagreen", "lightcoral", "lightpink", "lightsalmon", "lightgreen", "lightblue"];
 
+        // For each team
         for (var i = 0; i < clubEvents.teams.length; i++) {
+
+            // Add team to teamsList
+            newTeam = {id:clubEvents.teams[i].id, name: clubEvents.teams[i].name, color: colors[i]};
+            teamsList.push(newTeam);
+
+            // For each event
             for (var j = 0; j < clubEvents.teams[i].events.length; j++) {
 
+                // Add eventType to eventTypesList
+                newType = clubEvents.teams[i].events[j].type;
+                if (!eventTypesList.includes(newType)){
+                    eventTypesList.push(newType);
+                }
+
+                // Create new event
                 newEvent = {
                     allDay: true,
                     endDate: new Date(clubEvents.teams[i].events[j].start_at),
                     startDate: new Date(clubEvents.teams[i].events[j].start_at),
                     title: <div>
-                                <div className={"event"}>Event {clubEvents.teams[i].events[j].id}</div>
-                                <div className={"info_popup"}>{clubEvents.teams[i].events[j].name}
-                                ({clubEvents.teams[i].id})</div>
+                                <div className={"event"}>{clubEvents.teams[i].name} ({clubEvents.teams[i].events[j].id})</div>
+                                <div className={"info_popup"}>{clubEvents.teams[i].events[j].type}</div>
                             </div>,
                     hexColor: colors[i],
                     teamId: clubEvents.teams[i].id,
-                    type: clubEvents.teams[i].events[j].name
+                    type: clubEvents.teams[i].events[j].type
                 };
                 events.push(newEvent);
             }
-            this.setState({events: events});
         }
-    }
-
-    // Get teams list in state.teamsList
-    getTeamsList(){
-        var teamsList = [];
-
-        var newTeam = {};
-
-        for (var i = 0; i < clubEvents.teams.length; i++) {
-            console.log(clubEvents.teams[i].id);
-            newTeam = {id:clubEvents.teams[i].id, name: clubEvents.teams[i].name};
-            teamsList.push(newTeam);
-        }
-        this.setState({teamsList: teamsList});
-    }
-
-    // Get teams list in state.teamsList
-    getEventTypesList(){
-        var eventTypesList = [];
-
-        var newType = {};
-
-        for (var i = 0; i < clubEvents.teams.length; i++) {
-            console.log(clubEvents.teams[i]);
-            for(var j=0; j<clubEvents.teams[i].events.length; j++) {
-                newType = clubEvents.teams[i].events[j].name;
-                if (!eventTypesList.includes(newType)){
-                    eventTypesList.push(newType);
-                }
-            }
-        }
-        this.setState({eventTypesList: eventTypesList});
-        console.log(eventTypesList)
+        this.setState({events: events, teamsList: teamsList, eventTypesList: eventTypesList});
     }
 
     // Filter events if there is a filter
@@ -174,6 +159,7 @@ class CalendarApp extends Component {
             }
             return(filteredEvents);
         }
+        // If only type filter
         else if(this.state.selectedEventTypes.length > 0){
             for(var k=0; k<this.state.events.length; k++){
                 if(this.state.selectedEventTypes.includes(this.state.events[k].type)){
@@ -182,9 +168,11 @@ class CalendarApp extends Component {
             }
             return(filteredEvents);
         }
+        // If no filter
         return(this.state.events);
     }
 
+    // Show Grid calendar or List calendar
     showCalendar(){
 
         if(this.state.calendarView === "grid") {
@@ -213,6 +201,7 @@ class CalendarApp extends Component {
         }
     }
 
+    // Show clicked cell date
     showSlot(){
         // http://as-rocknroll.local.sporteasy.net:8000/event/new/all/?date=2018-12-20
         // window.location.reload();
@@ -232,11 +221,8 @@ class CalendarApp extends Component {
 
     componentDidMount(){
         // this.getApiEventsList();
-        this.getTeamsList();
-        this.getEventTypesList();
         this.createClubEventsFromJson();
     }
-
 
     render() {
 
