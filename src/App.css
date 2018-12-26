@@ -49,3 +49,72 @@
 .rbc-day-bg:hover{
   background: #e5e5e5;
 }
+
+#calendar{
+  height: 600px;
+  width: 900px;
+  padding:15px;
+}
+
+/*Actions Menu*/
+
+#actions_menu{
+  padding:15px;
+}
+
+.action_button{
+  color: black;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  padding: 6px ;
+  display: inline;
+  background-color: white;
+  cursor: pointer;
+  margin: 5px;
+  height: 40px;
+  background-image: none;
+  text-shadow: none;
+  opacity: 0.75;
+  line-height: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.action_button:hover{
+  opacity: 1!important;
+  background: #ececec;
+}
+
+.selection_action_button{
+  pointer-events:none;
+  opacity: 0.3;
+  cursor: none;
+}
+
+.action_link{
+  text-decoration: none;
+}
+
+.add_a_member_button{
+  background: #3cabff;
+  color: white;
+}
+
+.add_a_member_button:hover{
+  opacity: 1!important;
+  background: #3cabff;
+}
+
+.action_filter{
+  color: black;
+  font-size: 12px;
+  border: none!important;
+  border-radius: 2px;
+  display: inline;
+  padding: 2px;
+  background-color: white;
+  margin: 5px;
+  float: right!important;
+  height: 40px!important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}

@@ -4,6 +4,7 @@ import BigCalendar from "react-big-calendar";
 import './App.css';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import ActionsMenu from './ActionsMenu';
 
 import {Popover, OverlayTrigger, Button} from 'react-bootstrap';
 
@@ -131,18 +132,24 @@ class App extends Component {
     render() {
 
     return (
-        <div style={{ height: 600, width: 900 }}>
-            <BigCalendar
-                localizer={localizer}
-                events={this.state.events}
-                startAccessor="startDate"
-                endAccessor="endDate"
-                eventPropGetter={(this.eventStyleGetter)}
-                selectable={true}
-                onSelectEvent={event => console.log(event)}
-                onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
-            />
-            {this.showSlotPopUp()}
+        <div>
+
+            <ActionsMenu/>
+
+            <div id={"calendar"}>
+                <BigCalendar
+                    localizer={localizer}
+                    events={this.state.events}
+                    startAccessor="startDate"
+                    endAccessor="endDate"
+                    eventPropGetter={(this.eventStyleGetter)}
+                    selectable={true}
+                    onSelectEvent={event => console.log(event)}
+                    onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
+                />
+                {this.showSlotPopUp()}
+            </div>
+
         </div>
     );
     }
