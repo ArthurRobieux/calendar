@@ -30,6 +30,26 @@
 					"name": "Compétition",
 					"start_at": "12-12-2018"
 				}]
+		},
+		{
+			"id": 13,
+			"name": "Real Madrid",
+			"events": [
+				{
+					"id": 54,
+					"name": "Match Amical",
+					"start_at": "12-08-2018"
+				},
+				{
+					"id": 42,
+					"name": "Match Amical",
+					"start_at": "12-09-2018"
+				},
+				{
+					"id": 11,
+					"name": "Compétition",
+					"start_at": "12-21-2018"
+				}]
 		}
 	]
 }

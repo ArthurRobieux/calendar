@@ -90,7 +90,7 @@ class Calendar extends Component {
         var newEvent;
         var events = [];
 
-        const colors = ["lightgreen", "lightsalmon", "lightpurple", "lightgreen", "gold", "lightblue"];
+        const colors = ["lightskyblue", "lightseagreen", "lightcoral", "lightpink", "lightsalmon", "lightgreen", "lightblue"];
 
         for (var i = 0; i < clubEvents.teams.length; i++) {
             for (var j = 0; j < clubEvents.teams[i].events.length; j++) {
