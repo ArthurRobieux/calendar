@@ -55,8 +55,11 @@
 
 #calendar{
   height: 600px;
-  width: 100%;
+  width: 80%;
   padding:15px;
+  float: right;
+  background: #f4f4f4;
+  border-radius: 5px;
 }
 
 #calendarApp{
@@ -65,10 +68,22 @@
   margin-left: auto;
 }
 
+#side_filters{
+  width:15%;
+  float: left;
+  background: #f4f4f4;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /*Actions Menu*/
 
 #actions_menu{
-  padding:15px;
+  padding:0 0 15px 0;
+}
+
+#events_title{
+  color: #3cabff;
 }
 
 .action_button{

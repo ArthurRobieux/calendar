@@ -5,6 +5,7 @@ import './CalendarApp.css';
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import ActionsMenu from './ActionsMenu';
+import SideFilters from './SideFilters';
 import clubEvents from "./clubEvents.json"
 
 moment.locale("en");
@@ -171,7 +172,13 @@ class CalendarApp extends Component {
         return (
             <div id={"calendarApp"}>
 
+                <h3 id={"events_title"}>Evénements</h3>
+
                 <ActionsMenu Calendar={this}/>
+
+                <div id={"side_filters"}>
+                    <SideFilters Calendar={this}/>
+                </div>
 
                 <div id={"calendar"}>
                     <BigCalendar
@@ -186,6 +193,8 @@ class CalendarApp extends Component {
                     />
                     {this.showSlot()}
                 </div>
+
+
 
             </div>
         );
