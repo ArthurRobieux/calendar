@@ -118,9 +118,12 @@ class CalendarApp extends Component {
     getTeamsList(){
         var teamsList = [];
 
+        var newTeam = {};
+
         for (var i = 0; i < clubEvents.teams.length; i++) {
             console.log(clubEvents.teams[i].id);
-            teamsList.push(clubEvents.teams[i].id);
+            newTeam = {id:clubEvents.teams[i].id, name: clubEvents.teams[i].name};
+            teamsList.push(newTeam);
         }
         this.setState({teamsList: teamsList});
     }
