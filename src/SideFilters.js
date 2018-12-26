@@ -45,7 +45,9 @@ class SideFilters extends Component {
             <div>
 
               <div id={"side_filter"}>
-                  Types
+                  <div className={"side_filter_title"}>
+                      Types
+                  </div>
                   <hr/>
                     {Calendar.state.eventTypesList.map(eventType => (
                         <div>
@@ -61,7 +63,9 @@ class SideFilters extends Component {
               <br/>
 
               <div id={"side_filter"}>
-                  Equipes
+                  <div className={"side_filter_title"}>
+                    Equipes
+                  </div>
                   <hr/>
                     {Calendar.state.teamsList.map(team => (
                         <div>
