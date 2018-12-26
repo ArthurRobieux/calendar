@@ -6,6 +6,7 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import ActionsMenu from './ActionsMenu';
 import SideFilters from './SideFilters';
+import CalendarList from './CalendarList';
 import clubEvents from "./clubEvents.json"
 
 moment.locale("en");
@@ -195,7 +196,7 @@ class CalendarApp extends Component {
         else{
             return(
                 <div id={"list_calendar"}>
-                    Liste des événements
+                    <CalendarList/>
                 </div>
             )
         }

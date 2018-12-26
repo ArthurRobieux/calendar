@@ -7,13 +7,12 @@ html {
 .rbc-now > a{
   color: white!important;
   background: #3cabff;
-  border-radius: 20px;
+  border-radius: 15px;
   padding: 4px
 }
 
 .rbc-today{
   background-color: white!important;
-  color: blue;
 }
 
 .rbc-row-content{
@@ -28,12 +27,40 @@ html {
   cursor: pointer;
 }
 
-.rbc-day-bg:hover{
-  background: #e5e5e5;
+.rbc-day-bg:hover, .rbc-today:hover{
+  background: #fafafa!important;
 }
 
 .rbc-off-range-bg{
   background: white!important;
+}
+
+.rbc-toolbar .rbc-toolbar-label{
+  order: -1;
+  text-align: left!important;
+  font-weight: bold;
+}
+
+.rbc-toolbar{
+  padding: 15px;
+}
+
+.rbc-btn-group{
+  padding-left: 10px;
+}
+
+.rbc-toolbar button{
+  background: #efefef!important;
+  outline: none;
+}
+
+.rbc-btn-group > button:first-child:not(:last-child){
+  color: #3cabff;
+  font-weight: bold;
+}
+
+.rbc-month-view{
+  border: none!important;
 }
 
 /*CSS*/
@@ -49,9 +76,9 @@ html {
 }
 
 #calendar{
-  height: 600px;
-  width: 80%;
-  padding:15px;
+  height: 750px;
+  width: 83%;
+  /*padding:15px;*/
   float: right;
   background: white;
   border-radius: 5px;
