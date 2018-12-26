@@ -21,6 +21,7 @@ class CalendarApp extends Component {
             selectedSlots: {slots: []},
             teamsList: [],
             selectedTeams: [],
+            calendarView: "grid",
         }
     }
 
@@ -143,6 +144,34 @@ class CalendarApp extends Component {
         return(this.state.events);
     }
 
+    showCalendar(){
+
+        if(this.state.calendarView === "grid") {
+            return (
+                <div id={"grid_calendar"}>
+                    <BigCalendar
+                        localizer={localizer}
+                        events={this.filteredEvents()}
+                        startAccessor="startDate"
+                        endAccessor="endDate"
+                        eventPropGetter={(this.eventStyleGetter)}
+                        selectable={true}
+                        onSelectEvent={event => console.log(event)}
+                        onSelectSlot={(slot) => this.setState({activePopup: true, selectedSlots: slot})}
+                    />
+                    {this.showSlot()}
+                </div>
+            )
+        }
+        else{
+            return(
+                <div id={"list_calendar"}>
+                    Liste des événements
+                </div>
+            )
+        }
+    }
+
     showSlot(){
         // http://as-rocknroll.local.sporteasy.net:8000/event/new/all/?date=2018-12-20
         // window.location.reload();
@@ -184,17 +213,7 @@ class CalendarApp extends Component {
                 </div>
 
                 <div id={"calendar"}>
-                    <BigCalendar
-                        localizer={localizer}
-                        events={this.filteredEvents()}
-                        startAccessor="startDate"
-                        endAccessor="endDate"
-                        eventPropGetter={(this.eventStyleGetter)}
-                        selectable={true}
-                        onSelectEvent={event => console.log(event)}
-                        onSelectSlot={(slot) => this.setState({activePopup:true, selectedSlots:slot})}
-                    />
-                    {this.showSlot()}
+                    {this.showCalendar()}
                 </div>
 
 

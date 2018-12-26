@@ -3,6 +3,10 @@ import './CalendarApp.css';
 
 class ActionsMenu extends Component {
 
+    changeView(Calendar, view){
+        Calendar.setState({calendarView: view})
+    }
+
     render() {
 
         const Calendar = this.props.Calendar;
@@ -24,6 +28,16 @@ class ActionsMenu extends Component {
                     Export
                 </button>
               </a>
+
+              {/*Show grid calendar*/}
+              <button className={"action_button"} onClick={() => this.changeView(Calendar, "grid")}>
+                  Grid
+              </button>
+
+              {/*Show list calendar*/}
+              <button className={"action_button"} onClick={() => this.changeView(Calendar, "list")}>
+                  List
+              </button>
 
               {/*General Filter*/}
               <input className={"action_filter"} type={"text"} placeholder={"Rechercher.."}/>
