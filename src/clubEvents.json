@@ -7,17 +7,17 @@
 			"events": [
 				{
 					"id": 5,
-					"name": "Entrainement",
+					"type": "Entrainement",
 					"start_at": "2018-12-27T14:00:00+02:00"
 				},
 				{
 					"id" : 7,
-					"name": "Match Amical",
+					"type": "Match Amical",
 					"start_at" : "12-04-2018"
 				},
 				{
 					"id" : 8,
-					"name": "Match Amical",
+					"type": "Match Amical",
 					"start_at" : "01-13-2019"
 				}]
 		},
@@ -27,12 +27,12 @@
 			"events": [
 				{
 					"id": 12,
-					"name": "Entrainement",
+					"type": "Entrainement",
 					"start_at": "12-03-2018"
 				},
 				{
 					"id": 32,
-					"name": "Compétition",
+					"type": "Compétition",
 					"start_at": "12-12-2018"
 				}]
 		},
@@ -42,22 +42,22 @@
 			"events": [
 				{
 					"id": 23,
-					"name": "Entrainement",
+					"type": "Entrainement",
 					"start_at": "12-01-2018"
 				},
 				{
 					"id": 24,
-					"name": "Compétition",
+					"type": "Compétition",
 					"start_at": "11-12-2018"
 				},
 				{
 					"id": 25,
-					"name": "Match Amical",
+					"type": "Match Amical",
 					"start_at": "11-03-2018"
 				},
 				{
 					"id": 26,
-					"name": "Compétition",
+					"type": "Compétition",
 					"start_at": "01-21-2019"
 				}]
 		},
@@ -67,22 +67,22 @@
 			"events": [
 				{
 					"id": 54,
-					"name": "Match Amical",
+					"type": "Match Amical",
 					"start_at": "12-08-2018"
 				},
 				{
 					"id": 42,
-					"name": "Match Amical",
+					"type": "Match Amical",
 					"start_at": "12-09-2018"
 				},
 				{
 					"id": 11,
-					"name": "Compétition",
+					"type": "Compétition",
 					"start_at": "12-21-2018"
 				},
 				{
 					"id": 14,
-					"name": "Barbecue",
+					"type": "Barbecue",
 					"start_at": "01-11-2019"
 				}]
 		}
