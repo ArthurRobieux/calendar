@@ -8,15 +8,15 @@
 				{
 					"id": 5,
 					"type": "Entrainement",
-					"start_at": "2018-12-27T14:00:00+02:00",
+					"start_at": "2018-12-26T14:00:00+02:00",
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -27,11 +27,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -42,11 +42,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
-						"current": true,
+						"name": "2019",
+						"current": false,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2019",
 						"_links": {}
 					}
 				}]
@@ -62,11 +62,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -77,11 +77,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				}]
@@ -97,11 +97,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -112,11 +112,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -127,11 +127,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -142,11 +142,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
-						"current": true,
+						"name": "2019",
+						"current": false,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2019",
 						"_links": {}
 					}
 				}]
@@ -162,11 +162,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -177,11 +177,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -192,11 +192,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
+						"name": "2018",
 						"current": true,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2018",
 						"_links": {}
 					}
 				},
@@ -207,11 +207,11 @@
 					"season": {
 						"start_date": "2018-08-01",
 						"end_date": "2019-07-31",
-						"name": "2018-2019",
-						"current": true,
+						"name": "2019",
+						"current": false,
 						"archived": false,
 						"id": 27,
-						"slug_name": "2018-2019",
+						"slug_name": "2019",
 						"_links": {}
 					}
 				}]

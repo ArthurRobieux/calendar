@@ -2,6 +2,14 @@ html {
   background: #f4f4f4;
 }
 
+hr {
+    border: 0;
+    height: 0;
+    width: 80%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /*Change big-react-table CSS*/
 
 .rbc-now > a{
@@ -184,6 +192,10 @@ html {
   background: #3cabff;
 }
 
+.calendar_view_button{
+  float: right;
+}
+
 .action_filter{
   color: black;
   font-size: 12px;
@@ -231,10 +243,17 @@ html {
     outline:0;
 }
 
-hr {
-    border: 0;
-    height: 0;
-    width: 80%;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+.select_season{
+  position: relative;
+  top: 6px;
+  float: right;
+  height: 40px;
+  background: white;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  opacity: 0.75;
+  width: 125px;
 }

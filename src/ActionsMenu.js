@@ -7,6 +7,10 @@ class ActionsMenu extends Component {
         Calendar.setState({calendarView: view})
     }
 
+    changeSelectedSeason(Calendar, season){
+        Calendar.setState({selectedSeason: season})
+    }
+
     render() {
 
         const Calendar = this.props.Calendar;
@@ -30,18 +34,25 @@ class ActionsMenu extends Component {
               </a>
 
               {/*Show grid calendar*/}
-              <button className={"action_button"} onClick={() => this.changeView(Calendar, "grid")}>
+              <button className={"action_button calendar_view_button"} onClick={() => this.changeView(Calendar, "grid")}>
                   Grid
               </button>
 
               {/*Show list calendar*/}
-              <button className={"action_button"} onClick={() => this.changeView(Calendar, "list")}>
+              <button className={"action_button calendar_view_button"} onClick={() => this.changeView(Calendar, "list")}>
                   List
               </button>
 
-              {/*General Filter*/}
-              <input className={"action_filter"} type={"text"} placeholder={"Rechercher.."}/>
+              {/*/!*General Filter*!/*/}
+              {/*<input className={"action_filter"} type={"text"} placeholder={"Rechercher.."}/>*/}
 
+              {/*Seasons Filter*/}
+              <select onChange={e => this.changeSelectedSeason(Calendar, e.target.value)} className={"select_season"}>
+                    <option value="">Toutes les saisons</option>
+                    {Calendar.state.seasonsList.map(season => (
+                        <option value={season}>Saison : {season}</option>
+                    ))}
+              </select>
           </div>
 
         );
