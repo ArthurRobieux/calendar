@@ -42,6 +42,10 @@ class CalendarList extends Component {
                           Header: "Evénements",
                           accessor: "events"
                         },
+                        {
+                          Header: "Saison",
+                          accessor: "seasonName"
+                        },
                       ]
                     }
                   pageSize={pageSize} showPagination={false}

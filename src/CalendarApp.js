@@ -133,6 +133,7 @@ class CalendarApp extends Component {
                     type: clubEvents.teams[i].events[j].type,
                     number: clubEvents.teams[i].events[j].id,
                     date: String(clubEvents.teams[i].events[j].start_at),
+                    seasonName: clubEvents.teams[i].events[j].season.name,
 
                 };
                 events.push(newEvent);
