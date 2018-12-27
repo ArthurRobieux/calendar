@@ -27,9 +27,9 @@ hr {
   top: 5px;
 }
 
-.event:hover + .info_popup{
-  display: block;
-}
+/*.event:hover + .info_popup{*/
+  /*display: block;*/
+/*}*/
 
 .rbc-day-bg{
   cursor: pointer;
