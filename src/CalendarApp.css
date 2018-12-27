@@ -257,3 +257,13 @@ hr {
   opacity: 0.75;
   width: 125px;
 }
+
+.team_name{
+  float: left;
+  padding: 2px 5px 2px 5px;
+  border-radius: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

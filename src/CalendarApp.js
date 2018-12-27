@@ -134,6 +134,8 @@ class CalendarApp extends Component {
                 //     this.setState({selectedSeason: clubEvents.teams[i].events[j].season.name});
                 // }
 
+                clubEvents.teams[i].color = colors[i];
+
                 // Create new event
                 newEvent = {
                     allDay: true,
@@ -145,7 +147,7 @@ class CalendarApp extends Component {
                             </div>,
                     hexColor: colors[i],
                     teamId: clubEvents.teams[i].id,
-                    teamName: clubEvents.teams[i].name,
+                    team: clubEvents.teams[i],
                     type: clubEvents.teams[i].events[j].type,
                     number: clubEvents.teams[i].events[j].id,
                     date: String(clubEvents.teams[i].events[j].start_at),

@@ -32,11 +32,12 @@ class CalendarList extends Component {
                         },
                         {
                           Header: "N°",
-                          accessor: "number"
+                          accessor: "number",
                         },
                         {
                           Header: "Equipe",
-                          accessor: "teamName"
+                          accessor: "team",
+                          Cell: team => (<div className={"team_name"} style={{background: team.value.color}}>{team.value.name}</div>),
                         },
                         {
                           Header: "Evénements",
