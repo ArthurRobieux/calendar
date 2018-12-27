@@ -152,6 +152,8 @@ class CalendarApp extends Component {
                     number: clubEvents.teams[i].events[j].id,
                     date: String(clubEvents.teams[i].events[j].start_at),
                     seasonName: clubEvents.teams[i].events[j].season.name,
+                    opponents: {opponent_left: clubEvents.teams[i].events[j].opponent_left,
+                             opponent_right: clubEvents.teams[i].events[j].opponent_right},
 
                 };
                 events.push(newEvent);

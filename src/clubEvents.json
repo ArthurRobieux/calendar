@@ -18,6 +18,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "PSG",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Barcelone",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -33,6 +53,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "PSG",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "FC Sèvres",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -48,6 +88,26 @@
 						"id": 27,
 						"slug_name": "2019",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "PSG",
+						"is_home": true,
+						"score": "3",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Lilles",
+						"is_home": false,
+						"score": "1",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				}]
 		},
@@ -68,6 +128,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OM",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Juventus",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -83,6 +163,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OM",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "defeat",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "PSG",
+						"is_home": false,
+						"score": "2",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "victory",
+						"id": 20
 					}
 				}]
 		},
@@ -103,6 +203,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OL",
+						"is_home": true,
+						"score": null,
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": null,
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Chelsea",
+						"is_home": false,
+						"score": null,
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": null,
+						"id": 20
 					}
 				},
 				{
@@ -118,6 +238,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OL",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Atletico",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -133,6 +273,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OL",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Etoile Rouge",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -148,6 +308,26 @@
 						"id": 27,
 						"slug_name": "2019",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "OL",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "defeat",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Amiens",
+						"is_home": false,
+						"score": "2",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "victory",
+						"id": 20
 					}
 				}]
 		},
@@ -168,6 +348,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "Real Madrid",
+						"is_home": true,
+						"score": null,
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": null,
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "Orléans",
+						"is_home": false,
+						"score": null,
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": null,
+						"id": 20
 					}
 				},
 				{
@@ -183,6 +383,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "Real Madrid",
+						"is_home": true,
+						"score": "2",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "defeat",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "PSV",
+						"is_home": false,
+						"score": "4",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "victory",
+						"id": 20
 					}
 				},
 				{
@@ -198,6 +418,26 @@
 						"id": 27,
 						"slug_name": "2018",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "Real Madrid",
+						"is_home": true,
+						"score": "1",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "victory",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "FC Gibson",
+						"is_home": false,
+						"score": "0",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "defeat",
+						"id": 20
 					}
 				},
 				{
@@ -213,6 +453,26 @@
 						"id": 27,
 						"slug_name": "2019",
 						"_links": {}
+					},
+					"opponent_left": {
+						"jersey_color": null,
+						"short_name": "Real Madrid",
+						"is_home": true,
+						"score": "0",
+						"is_current_team": true,
+						"full_name": "AS Rock'n'Roll",
+						"match_outcome": "defeat",
+						"id": 6
+					},
+					"opponent_right": {
+						"jersey_color": null,
+						"short_name": "OL",
+						"is_home": false,
+						"score": "3",
+						"is_current_team": false,
+						"full_name": "Football Club Gibson",
+						"match_outcome": "victory",
+						"id": 20
 					}
 				}]
 		}

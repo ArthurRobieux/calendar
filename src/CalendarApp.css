@@ -77,6 +77,10 @@ hr {
   outline: 0;
 }
 
+.ReactTable .rt-tbody{
+  font-size: 14px;
+}
+
 /*CSS*/
 
 .info_popup{
@@ -266,4 +270,18 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.opponents{
+  text-align: center;
+}
+
+.opponent{
+  display: inline;
+}
+
+.opponents_score{
+  display: inline;
+  padding: 0 10px 0 10px;
+  font-weight: bold;
 }

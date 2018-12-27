@@ -10,6 +10,42 @@ const CheckboxTable = checkboxHOC(ReactTable);
 
 class CalendarList extends Component {
 
+    showEventOpponents(opponents){
+
+        var score_color = "black";
+
+        if(opponents.value.opponent_left.is_current_team){
+            if(opponents.value.opponent_left.match_outcome === "victory"){
+                score_color = "green";
+            }
+            else if(opponents.value.opponent_left.match_outcome === "defeat"){
+                score_color = "red";
+            }
+        }
+        else{
+            if(opponents.value.opponent_left.match_outcome === "victory"){
+                score_color = "red";
+            }
+            else if(opponents.value.opponent_left.match_outcome === "defeat"){
+                score_color = "green";
+            }
+        }
+
+        return(
+            <div className={"opponents"}>
+                <div className={"opponent"}>
+                    {opponents.value.opponent_left.short_name}
+                </div>
+                <div className={"opponents_score"} style={{color: score_color}}>
+                    {opponents.value.opponent_left.score} - {opponents.value.opponent_right.score}
+                </div>
+                <div className={"opponent"}>
+                    {opponents.value.opponent_right.short_name}
+                </div>
+            </div>
+        )
+    }
+
     render() {
 
         const Calendar = this.props.Calendar;
@@ -44,7 +80,9 @@ class CalendarList extends Component {
                         },
                         {
                           Header: "Evénements",
-                          accessor: "events"
+                          accessor: "opponents",
+                          Cell: opponents => (this.showEventOpponents(opponents)),
+
                         },
                         {
                           Header: "Saison",
