@@ -29,14 +29,17 @@ class CalendarList extends Component {
                         {
                           Header: "Type",
                           accessor: "type",
+                          width: 150,
                         },
                         {
-                          Header: "N°",
+                          Header: "ID",
                           accessor: "number",
+                          width: 50,
                         },
                         {
                           Header: "Equipe",
                           accessor: "team",
+                          width: 125,
                           Cell: team => (<div className={"team_name"} style={{background: team.value.color}}>{team.value.name}</div>),
                         },
                         {
@@ -45,7 +48,8 @@ class CalendarList extends Component {
                         },
                         {
                           Header: "Saison",
-                          accessor: "seasonName"
+                          accessor: "seasonName",
+                          width: 100,
                         },
                       ]
                     }
