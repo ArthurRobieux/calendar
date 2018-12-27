@@ -1,15 +1,52 @@
 import React, { Component } from 'react';
+import checkboxHOC from "react-table/lib/hoc/selectTable";
+import ReactTable from "react-table";
+
 import './CalendarApp.css';
+import 'react-table/react-table.css'
+
+
+const CheckboxTable = checkboxHOC(ReactTable);
 
 class CalendarList extends Component {
 
     render() {
 
+        const Calendar = this.props.Calendar;
+        const pageSize = Calendar.filteredEvents().length;
+
         return(
 
             <div>
 
-                LALALA Je suis une liste d'événements
+                <ReactTable
+                  data={Calendar.filteredEvents()}
+                  columns={[
+                        {
+                          Header: "Date",
+                          accessor: "date"
+                        },
+                        {
+                          Header: "Type",
+                          accessor: "type",
+                        },
+                        {
+                          Header: "N°",
+                          accessor: "number"
+                        },
+                        {
+                          Header: "Equipe",
+                          accessor: "teamName"
+                        },
+                        {
+                          Header: "Evénements",
+                          accessor: "events"
+                        },
+                      ]
+                    }
+                  pageSize={pageSize} showPagination={false}
+                  className="-highlight"
+                />
 
             </div>
 

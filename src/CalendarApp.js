@@ -129,7 +129,11 @@ class CalendarApp extends Component {
                             </div>,
                     hexColor: colors[i],
                     teamId: clubEvents.teams[i].id,
-                    type: clubEvents.teams[i].events[j].type
+                    teamName: clubEvents.teams[i].name,
+                    type: clubEvents.teams[i].events[j].type,
+                    number: clubEvents.teams[i].events[j].id,
+                    date: String(clubEvents.teams[i].events[j].start_at),
+
                 };
                 events.push(newEvent);
             }
@@ -196,7 +200,7 @@ class CalendarApp extends Component {
         else{
             return(
                 <div id={"list_calendar"}>
-                    <CalendarList/>
+                    <CalendarList Calendar={this}/>
                 </div>
             )
         }

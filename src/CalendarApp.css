@@ -63,6 +63,12 @@ html {
   border: none!important;
 }
 
+/*Change react-table CSS*/
+
+.rt-th:focus{
+  outline: 0;
+}
+
 /*CSS*/
 
 .info_popup{
