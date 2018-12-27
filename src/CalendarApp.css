@@ -14,7 +14,7 @@ hr {
 
 .rbc-now > a{
   color: white!important;
-  background: #3cabff;
+  background: #2EB0FF;
   border-radius: 15px;
   padding: 4px
 }
@@ -27,9 +27,9 @@ hr {
   top: 5px;
 }
 
-/*.event:hover + .info_popup{*/
-  /*display: block;*/
-/*}*/
+.event:hover + .info_popup{
+  display: block;
+}
 
 .rbc-day-bg{
   cursor: pointer;
@@ -63,7 +63,7 @@ hr {
 }
 
 .rbc-btn-group > button:first-child:not(:last-child){
-  color: #3cabff;
+  color: #2EB0FF;
   font-weight: bold;
 }
 
@@ -146,7 +146,7 @@ hr {
 }
 
 #events_title{
-  color: #3cabff;
+  color: #2EB0FF;
 }
 
 .action_button{
@@ -162,7 +162,7 @@ hr {
   height: 40px;
   background-image: none;
   text-shadow: none;
-  opacity: 0.75;
+  opacity: 0.9;
   line-height: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
@@ -187,13 +187,13 @@ hr {
 }
 
 .add_a_member_button{
-  background: #3cabff;
+  background: #2EB0FF;
   color: white;
 }
 
 .add_a_member_button:hover{
   opacity: 1!important;
-  background: #3cabff;
+  background: #2EB0FF;
 }
 
 .calendar_view_button{
@@ -230,7 +230,7 @@ hr {
 
 .checkbox_filter:checked {
   -webkit-appearance: none;
-  background: #3cabff;
+  background: #2EB0FF;
   opacity: 1;
 }
 
