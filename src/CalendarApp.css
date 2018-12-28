@@ -81,6 +81,14 @@ hr {
   font-size: 14px;
 }
 
+.ReactTable .rt-thead .rt-th:last-child {
+    overflow: visible!important;
+}
+
+.ReactTable .rt-tbody .rt-td:last-child{
+    overflow: visible!important;
+}
+
 /*CSS*/
 
 .info_popup{
@@ -179,7 +187,7 @@ hr {
 .selection_action_button{
   pointer-events:none;
   opacity: 0.3;
-  cursor: none;
+  cursor: pointer;
 }
 
 .action_link{

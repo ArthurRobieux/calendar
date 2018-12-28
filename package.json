@@ -5,6 +5,8 @@
   "dependencies": {
     "moment": "2.20.1",
     "chance": "^1.0.17",
+    "emotion": "^9.2.3",
+    "uniqid": "^5.0.3",
     "react": "^16.7.0",
     "react-big-calendar": "^0.20.2",
     "react-bootstrap": "^0.32.4",
