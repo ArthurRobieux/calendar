@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "moment": "2.20.1",
+    "chance": "^1.0.17",
     "react": "^16.7.0",
     "react-big-calendar": "^0.20.2",
     "react-bootstrap": "^0.32.4",
