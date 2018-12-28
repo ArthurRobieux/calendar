@@ -13,7 +13,7 @@ class ActionsMenu extends Component {
         Calendar.setState({selectedSeason: season})
     }
 
-    exportCalendar(Calendar){
+    exportCalendar(){
 
         console.log(document.getElementById("calendar"));
 
@@ -22,6 +22,19 @@ class ActionsMenu extends Component {
             doc.text(10, 10, 'Calendrier');
             doc.addImage(canvas, 'PNG', 10, 20, 190, 160);
             doc.save('Calendrier.pdf');
+        });
+    }
+
+    printCalendar(){
+
+        console.log(document.getElementById("calendar"));
+
+        html2canvas(document.getElementById("calendar")).then(canvas => {
+            var doc = new jsPDF();
+            doc.text(10, 10, 'Calendrier');
+            doc.addImage(canvas, 'PNG', 10, 20, 190, 160);
+            doc.autoPrint();
+            doc.output('dataurlnewwindow');
         });
     }
 
@@ -41,8 +54,13 @@ class ActionsMenu extends Component {
               </a>
 
               {/*Export members list*/}
-                <button className={"action_button"} onClick={() => this.exportCalendar(Calendar)}>
+                <button className={"action_button"} onClick={() => this.exportCalendar()}>
                     Export
+                </button>
+
+              {/*Print members list*/}
+                <button className={"action_button"} onClick={() => this.printCalendar()}>
+                    Print
                 </button>
 
               {/*Show grid calendar*/}
